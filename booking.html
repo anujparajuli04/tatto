@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Your Session – Inkspire Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="booking.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#" class="logo">INKSPIRE STUDIO</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Artists.html">Artists</a></li>
+                    <li><a href="styles.html">Styles</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>Book Your Session</h1>
+    <p>Ready to get started? Fill out the form below and we'll get back to you within 24 hours to schedule your consultation.</p>
+  </header>
+
+  <!-- Booking Form Section -->
+  <section class="section">
+    <div class="container">
+      <form class="booking-form" id="bookingForm" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required />
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required />
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+
+        <div class="form-group">
+          <label for="artist">Preferred Artist</label>
+          <select id="artist" name="artist">
+            <option value="">No Preference</option>
+            <option value="sarah">Sarah Chen</option>
+            <option value="marcus">Marcus Rodriguez</option>
+            <option value="yuki">Yuki Tanaka</option>
+            <option value="alex">Alex Morgan</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="placement">Tattoo Placement</label>
+          <input type="text" id="placement" name="placement" placeholder="e.g., Upper arm, back, leg" />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Tattoo Description *</label>
+          <textarea id="description" name="description" required placeholder="Please describe your tattoo idea in detail..."></textarea>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="reference">Upload Reference Images</label>
+          <div class="file-input-wrapper">
+            <input type="file" id="reference" name="reference" multiple accept="image/*" />
+            <label for="reference" class="file-input-label">
+              <i class="fas fa-cloud-upload-alt"></i> Click to upload reference images
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date" />
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">
+          Reserve Your Ink
+        </button>
+      </form>
+
+      <!-- Success message -->
+      <div id="successMessage" style="display:none; margin-top: 30px; text-align:center; color: var(--gold); font-weight: 600;">
+        Thank you! Your booking request has been received. We'll contact you soon.
+      </div>
+    </div>
+  </section>
+
+   <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Studio Location</h3>
+                    <p>123 Ink Street<br>
+                    Creative District<br>
+                    City, State 12345</p>
+                    <p><strong>Phone:</strong> (555) 123-TATS</p>
+                    <p><strong>Email:</strong> hello@inkspirestudio.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Opening Hours</h3>
+                    <ul>
+                        <li>Monday - Thursday: 12pm - 8pm</li>
+                        <li>Friday - Saturday: 12pm - 10pm</li>
+                        <li>Sunday: 12pm - 6pm</li>
+                        <li>Consultations by appointment</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#artists">Our Artists</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#booking">Book Session</a></li>
+                        <li><a href="#">Aftercare Guide</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Stay Connected</h3>
+                    <p>Follow us for daily inspiration and behind-the-scenes content.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                    
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Inkspire Studio. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('bookingForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Clear previous errors
+            const errorMessages = form.querySelectorAll('.error-message');
+            errorMessages.forEach(em => em.textContent = '');
+
+            let valid = true;
+
+            // Name validation
+            const name = form.name;
+            if (!name.value.trim()) {
+            setError(name, 'Please enter your full name.');
+            valid = false;
+            }
+
+            // Email validation
+            const email = form.email;
+            if (!email.value.trim()) {
+            setError(email, 'Please enter your email.');
+            valid = false;
+            } else if (!validateEmail(email.value.trim())) {
+            setError(email, 'Please enter a valid email address.');
+            valid = false;
+            }
+
+            // Description validation
+            const desc = form.description;
+            if (!desc.value.trim()) {
+            setError(desc, 'Please provide a tattoo description.');
+            valid = false;
+            }
+
+            if (!valid) {
+            return;
+            }
+
+            // For demo: simulate form submission success
+            form.style.display = 'none';
+            successMessage.style.display = 'block';
+
+            // TODO: Implement actual form submission to server or email here
+        });
+
+        function setError(input, message) {
+            const errorEl = input.parentElement.querySelector('.error-message');
+            if (errorEl) errorEl.textContent = message;
+        }
+
+        function validateEmail(email) {
+            // Simple email regex
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+        });
+
+    </script>
+
+</body>
+</html>

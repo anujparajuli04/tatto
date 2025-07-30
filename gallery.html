@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inkspire Studio - Art That Stays With You</title>
+    <meta name="description" content="Custom, Clean, Timeless Ink by Award-Winning Artists at Inkspire Studio">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#" class="logo">INKSPIRE STUDIO</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Artists.html">Artists</a></li>
+                    <li><a href="styles.html">Styles</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+ 
+     <!-- Gallery Section -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Tattoo Gallery</h2>
+            <p class="section-subtitle">
+                Explore our portfolio of exceptional work, showcasing the artistry and skill of our talented team.
+            </p>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="blackgrey">Black & Grey</button>
+                <button class="filter-btn" data-filter="color">Color</button>
+                <button class="filter-btn" data-filter="lettering">Lettering</button>
+                <button class="filter-btn" data-filter="sleeve">Sleeve</button>
+                <button class="filter-btn" data-filter="small">Small Tattoos</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in" data-category="blackgrey"><img src="image.png" alt="picture"></div>
+                <div class="gallery-item fade-in" data-category="color"></div>
+                <div class="gallery-item fade-in" data-category="lettering"></div>
+                <div class="gallery-item fade-in" data-category="sleeve"></div>
+                <div class="gallery-item fade-in" data-category="small"></div>
+                <div class="gallery-item fade-in" data-category="blackgrey"></div>
+                <div class="gallery-item fade-in" data-category="color"></div>
+                <div class="gallery-item fade-in" data-category="small"></div>
+                <div class="gallery-item fade-in" data-category="lettering"></div>
+                <div class="gallery-item fade-in" data-category="sleeve"></div>
+                <div class="gallery-item fade-in" data-category="blackgrey"></div>
+                <div class="gallery-item fade-in" data-category="color"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Studio Location</h3>
+                    <p>123 Ink Street<br>
+                    Creative District<br>
+                    City, State 12345</p>
+                    <p><strong>Phone:</strong> (555) 123-TATS</p>
+                    <p><strong>Email:</strong> hello@inkspirestudio.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Opening Hours</h3>
+                    <ul>
+                        <li>Monday - Thursday: 12pm - 8pm</li>
+                        <li>Friday - Saturday: 12pm - 10pm</li>
+                        <li>Sunday: 12pm - 6pm</li>
+                        <li>Consultations by appointment</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#artists">Our Artists</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#booking">Book Session</a></li>
+                        <li><a href="#">Aftercare Guide</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Stay Connected</h3>
+                    <p>Follow us for daily inspiration and behind-the-scenes content.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                    
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Inkspire Studio. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+     // Gallery filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 100);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+  </script>
+</body>
+</html>
